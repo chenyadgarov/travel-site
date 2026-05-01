@@ -1,0 +1,445 @@
+body {
+  margin: 0;
+  padding-top: 150px;
+  background-color: antiquewhite;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h1,h2,h3,h4{
+  text-align: center;
+  font-family: "titelfont";
+  padding-bottom: 10px;
+}
+h1 {
+  color: rgb(239, 247, 199);
+  font-size: 70px;
+}
+h2,h3,h4{
+  color:rgb(66, 18, 18);
+}
+h2{
+  font-size: 60px;
+}
+h3{
+   font-size: 50px;
+}
+h4{
+   font-size: 40px;
+}
+.welcome
+{
+ padding: 20px; 
+ margin: 0px;
+}
+p,span{
+   font-size: 40px;
+ 
+}
+
+.card span,p {
+  display: block;
+  text-align: right;
+  direction: rtl;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+#site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(66, 18, 18);
+  color: white;
+  padding-right: 20px;
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+
+}
+#destinations-nav
+{
+    position: relative;
+}
+#destinations-nav ul {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  list-style: none;
+  background-color: rgb(66, 18, 18);
+  padding: 10px;
+  margin: 0;
+  border-radius: 10px;
+}
+
+#destinations-nav:hover ul {
+  display: block;
+}
+#destinations-nav #destinations-ul a {
+  padding: 10px;
+  display: block;
+}
+nav a {
+  position: relative;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 10px;
+}
+nav a::after
+{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: white;
+  bottom: -4px;
+  right: 0;
+  transition: width 0.3s;
+}
+nav a:hover::after {
+  width: 100%;
+}
+nav a:hover,#destinations-nav:hover{
+  color: black;
+  background-color: rgb(239, 247, 199);
+}
+
+main {
+  background-color: antiquewhite;
+  max-width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+.hero {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.intro {
+  background-color: white;
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.trips-preview,
+.destinations-preview,
+.experiences-preview
+{
+  margin-bottom: 40px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 20px;
+}
+
+.card {
+  flex: 1 1 250px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 12px rgba(173, 12, 12, 0.1);
+  align-items: flex-end;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+  box-shadow: 0 0 30px rgb(135, 154, 184);
+}
+h2{
+  margin: 0px;
+}
+@font-face {
+  font-family: "titelfont";
+  src: url("fonts/anka/ankaclm-bold-webfont.ttf");
+}
+.argentina::after
+{
+  content: "";
+  display: block;
+  height: 0;
+  background-image: url("../images/argentina.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: height 0.3s ease;
+}
+.brazil::after
+{
+  content: "";
+  display: block;
+  height: 0;
+  background-image: url("../images/brazil.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: height 0.3s ease;
+}
+.mexico::after
+{
+  content: "";
+  display: block;
+  height: 0;
+  background-image: url("../images/mexico.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: height 0.3s ease;
+}
+.florida::after
+{
+  content: "";
+  display: block;
+  height: 0;
+  background-image: url("../images/florida.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: height 0.3s ease;
+}
+.card:hover::after {
+  height: 300px;
+}
+
+.about
+{
+padding: 40px; 
+margin: 0px;
+}
+.why
+{
+  margin: 20px 0 40px 0;
+  margin-bottom: 50px;
+  background-color: rgb(156, 151, 128);
+  padding: 50px;
+  height: 100%;
+}
+
+.card.list:hover {
+  transform: translateY(-10px);
+  background-color:antiquewhite;
+}
+.card.list ul
+{
+ direction: rtl;
+}
+
+.likedAbout
+{
+   margin-left: 200px;
+  margin-right: 200px;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+ .visitedCities
+{
+  display: flex;
+  direction: rtl;
+} 
+#city,.tripsCity {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 0px;
+  margin-left:100px;
+}
+.tripsCity
+{ align-items: flex-start;
+}
+ 
+.tripsCity button:hover, #city button:hover
+{
+  transform: translateY(5px);
+  box-shadow: 0 0 30px rgb(135, 154, 184);
+}
+#city button,.tripsCity button
+{
+  padding: 15px 20px;
+  background-color: rgb(66, 18, 18);
+  text-decoration: none; /* Removes the underline */
+  font-size: 25px;
+  border-radius: 12px;
+  color: aliceblue;
+  width: 100%;
+  height: 150px;
+  max-width: 300px;
+}
+
+
+.cityInState
+{
+  display: none;
+   margin-right: 50px;
+}
+.aboutCity
+{
+  display: inline-block;
+  margin-left: 50px;
+  padding-right: 20px;
+  display: none;
+ 
+}
+
+.aboutCity img {
+  width: 100%;
+  max-width: 500px;
+
+}
+button
+{
+   cursor: pointer;
+}
+.site-highlights,
+.project-skills {
+  background-color: rgba(255, 255, 255, 0.425);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+section {
+  margin-bottom: 100px;
+}
+.welcome {
+ background: linear-gradient(135deg, rgba(66, 18, 18, 0.96), rgba(125, 67, 67, 0.9));
+  color: white;
+  padding: 70px 40px;
+  border-radius: 24px;
+  margin: 30px 0 50px;
+  text-align: center;
+}
+
+.welcome h2 {
+  color: white;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.stateBtn {
+  all: unset;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-family: "titelfont";
+  font-size: 40px;
+  color: rgb(66, 18, 18);
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+
+.countries {
+  display: flex;
+  gap: 30px; 
+  
+}
+#city button.active, .tripsCity button.active {
+  color:red;
+}
+
+.aboutCity img{
+    width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+li{
+  font-size: 40px;
+}
+
+/* mobile: */
+
+@media (max-width: 768px) {
+
+  body {
+    padding-top: 120px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  h4 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  main {
+    max-width: 95%;
+    padding: 10px;
+  }
+
+  #site-header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .main-nav {
+    gap: 15px;
+    padding: 0;
+  }
+
+  nav a {
+    font-size: 20px;
+  }
+
+  .cards-container,
+  .countries,
+  .visitedCities {
+    flex-direction: column;
+  }
+
+  #city,
+  .tripsCity {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  #city button,
+  .tripsCity button {
+    max-width: none;
+    height: auto;
+    min-height: 70px;
+    font-size: 20px;
+  }
+
+  .aboutCity {
+    margin-left: 0;
+    padding-right: 0;
+  }
+
+  .aboutCity img {
+    max-width: 100%;
+  }
+
+  .likedAbout {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

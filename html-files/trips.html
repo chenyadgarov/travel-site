@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> מסעות וחוויות | טיולים</title>
+  <link rel="stylesheet" href="../hanymoon.css">
+</head>
+
+<body>
+  <header id="site-header">
+    <h1>מסעות וחוויות</h1>
+
+    <nav aria-label="ניווט ראשי">
+      <ul class="main-nav">
+        <li><a href="../index.html">בית</a></li>
+        <li><a href="trips.html">טיולים</a>
+        </li>
+        <li id="destinations-nav"><a href="destinations.html">יעדים</a>
+          <ul id="destinations-ul">
+            <li><a href="argentina.html">ארגנטינה</a></li>
+            <li><a href="brazil.html">ברזיל</a></li>
+            <li><a href="mexico.html">מקסיקו</a></li>
+            <li><a href="florida.html">פלורידה</a></li>
+          </ul>
+        </li>
+        <li><a href="experiences.html">חוויות</a></li>
+        <li><a href="pic.html"> תמונות</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="welcome">
+      <h2> טיולים </h2>
+      <p>
+        כאן נראה המלצות בכל מדינה ובכל עיר מה כדאי לעשות מהניסון האישי
+      </p>
+    </section>
+
+    <section class="countries">
+      <article class="card list">
+        <button class="stateBtn" data-country="argentinaCities">ארגנטינה</button>
+      </article>
+
+      <article class="card list">
+        <button class="stateBtn" data-country="brazilCities">ברזיל</button>
+      </article>
+
+      <article class="card list">
+        <button class="stateBtn" data-country="mexicoCities">מקסיקו</button>
+      </article>
+
+      <article class="card list">
+        <button class="stateBtn" data-country="floridaCities">פלורידה</button>
+      </article>
+    </section>
+
+    <article>
+
+      <section class="cityInState" id="argentinaCities">
+        <h4>הערים שביקרנו בארגנטינה</h4>
+        <div class="tripsCity">
+          <button class="cityBtn" data-city="buenosAires">בואנוס איירס</button>
+          <button class="cityBtn" data-city="ushuaia">אושואייה</button>
+          <button class="cityBtn" data-city="bariloche">ברילוצ׳ה</button>
+          <button class="cityBtn" data-city="puertoIguazu">פוארטו איגואסו</button>
+        </div>
+      </section>
+
+
+      <section class="cityInState" id="brazilCities">
+        <h4>הערים שביקרנו בברזיל</h4>
+        <div class="tripsCity">
+          <button class="cityBtn" data-city="rio">ריו דה ז׳נרו</button>
+          <button class="cityBtn" data-city="fozIguazu">פוז דה איגואסו</button>
+        </div>
+      </section>
+      <section class="cityInState" id="mexicoCities">
+        <h4>הערים שביקרנו במקסיקו</h4>
+        <div class="tripsCity">
+          <button class="cityBtn" data-city="playaDelCarmen"> פלאייה דל כרמן</button>
+          <button class="cityBtn" data-city="cancun">קנקון</button>
+        </div>
+      </section>
+
+      <section class="cityInState" id="floridaCities">
+        <h4>הערים שביקרנו פלורידה</h4>
+        <div class="tripsCity">
+          <button class="cityBtn" data-city="miami"> מיאמי</button>
+          <button class="cityBtn" data-city="orlando">אורלנדו</button>
+        </div>
+      </section>
+      </div>
+    </article>
+
+    <div class="aboutCity rio">
+
+      <p> עיר החופים, הרוגע והקרנבל</p>
+      <img src="../images/argentina/bariloche/cero companiero/20260102_122520.jpg">
+    </div>
+    <div class="aboutCity fozIguazu">
+
+      <p>מפלי איגואסו המרשימים...</p>
+      <p> אני יותר אהבתי את הצד הזה של המפלים, העיר יותר שוקקת חיים, היא לא רק המפלים יש בה גם קניונים, מסעדות שוות,
+        לומדים שם ממש עיר לכל דבר</p>
+      <img src="../images/argentina/iguazu falls/20260109_155332.jpg">
+    </div>
+    </section>
+    </div>
+  </main>
+
+  <script src="../js/script.js"></script>
+</body>
+
+</html>
