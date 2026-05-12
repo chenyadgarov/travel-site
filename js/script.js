@@ -38,3 +38,56 @@ stateBtns.forEach((state) => {
 
   });
 });
+
+
+//  const countryTabs = document.querySelectorAll(".country-tab");
+//     const countryStories = document.querySelectorAll(".country-story");
+
+//     countryTabs.forEach((tab) => {
+//       tab.addEventListener("click", () => {
+//         countryTabs.forEach((btn) => btn.classList.remove("active"));
+//         countryStories.forEach((story) => story.classList.remove("active"));
+
+//         tab.classList.add("active");
+//         document.getElementById(tab.dataset.country).classList.add("active");
+//       });
+//     });
+
+//     const placeCards = document.querySelectorAll("#argentina-story .place-card[data-place]");
+//     const placeStories = document.querySelectorAll("#argentina-story .place-story");
+
+//     placeCards.forEach((card) => {
+//       card.addEventListener("click", () => {
+//         placeCards.forEach((c) => c.classList.remove("active"));
+//         placeStories.forEach((story) => story.classList.remove("active"));
+
+//         card.classList.add("active");
+//         document.getElementById(card.dataset.place).classList.add("active");
+//       });
+//     });
+
+ const countryButtons = document.querySelectorAll(".country-btn");
+    const countryPanels = document.querySelectorAll(".country-panel");
+
+    countryButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        countryButtons.forEach((btn) => btn.classList.remove("active"));
+        countryPanels.forEach((panel) => panel.classList.remove("active"));
+
+        button.classList.add("active");
+        document.getElementById(button.dataset.country).classList.add("active");
+      });
+    });
+
+    const placeButtons = document.querySelectorAll(".place-btn");
+    const placeContents = document.querySelectorAll(".place-content");
+
+    placeButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        placeButtons.forEach((btn) => btn.classList.remove("active"));
+        placeContents.forEach((content) => content.classList.remove("active"));
+
+        button.classList.add("active");
+        document.getElementById(button.dataset.place).classList.add("active");
+      });
+    });
