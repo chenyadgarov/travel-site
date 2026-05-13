@@ -6,32 +6,109 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> מסעות וחוויות | תמונות</title>
   <link rel="stylesheet" href="../hanymoon.css">
+  <link rel="stylesheet" href="../gallery.css">
 </head>
 
 <body>
   <header id="site-header">
     <h1>מסעות וחוויות</h1>
-
-    <nav aria-label="ניווט ראשי">
-      <ul class="main-nav">
-        <li><a href="../index.html">בית</a></li>
-        <li><a href="trips.html">טיולים</a>
-        </li>
-        <li id="destinations-nav"><a href="destinations.html">יעדים</a>
-          <ul id="destinations-ul">
-            <li><a href="argentina.html">ארגנטינה</a></li>
-            <li><a href="brazil.html">ברזיל</a></li>
-            <li><a href="mexico.html">מקסיקו</a></li>
-            <li><a href="florida.html">פלורידה</a></li>
-          </ul>
-        </li>
-        <li><a href="experiences.html">חוויות</a></li>
-        <li><a href="pic.html"> תמונות</a></li>
-        <li><a href="story.html"> הסיפור שלנו</a></li>
-      </ul>
-    </nav>
+    <div id="nav-placeholder"></div>
+    <script src="../js/nav.js"></script>
   </header>
-  <main></main>
+  <main class="gallery-page">
+
+    <section class="gallery-hero">
+      <p class="hero-label">הזיכרונות שלנו מהדרך</p>
+      <h1>גלריית תמונות מהטיול</h1>
+      <p>
+        כאן אפשר לחפש ולסנן תמונות לפי מדינה, עיר וסוג חוויה —
+        נופים, אוכל, חופים, ערים, אטרקציות ורגעים מיוחדים.
+      </p>
+    </section>
+
+    <section class="gallery-controls" aria-label="סינון תמונות">
+      <div class="search-box">
+        <label for="searchInput">חיפוש חופשי</label>
+        <input type="text" id="searchInput" placeholder="לדוגמה: ברילוצ׳ה, מפלים, אוכל, חוף..." />
+      </div>
+
+      <div class="filters-grid">
+        <div class="filter-group">
+          <label for="countryFilter">מדינה</label>
+          <select id="countryFilter">
+            <option value="all">כל המדינות</option>
+            <option value="argentina">ארגנטינה</option>
+            <option value="brazil">ברזיל</option>
+            <option value="mexico">מקסיקו</option>
+            <option value="florida">פלורידה</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="cityFilter">עיר</label>
+          <select id="cityFilter">
+            <option value="all">כל הערים</option>
+            <option value="buenos-aires">בואנוס איירס</option>
+            <option value="bariloche">ברילוצ׳ה</option>
+            <option value="ushuaia">אושואיה</option>
+            <option value="iguazu">איגואסו</option>
+            <option value="rio">ריו דה ז׳ניירו</option>
+            <option value="cancun">קנקון</option>
+            <option value="tulum">טולום</option>
+            <option value="miami">מיאמי</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="categoryFilter">קטגוריה</label>
+          <select id="categoryFilter">
+            <option value="all">כל הקטגוריות</option>
+            <option value="nature">נופים</option>
+            <option value="city">עיר</option>
+            <option value="food">אוכל</option>
+            <option value="beach">ים וחופים</option>
+            <option value="adventure">אטרקציות</option>
+            <option value="couple">זוגי</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="quick-buttons">
+        <button class="quick-filter active" data-country="all">הכל</button>
+        <button class="quick-filter" data-country="argentina">ארגנטינה</button>
+        <button class="quick-filter" data-city="bariloche">ברילוצ׳ה</button>
+        <button class="quick-filter" data-city="iguazu">איגואסו</button>
+        <button class="quick-filter" data-category="beach">חופים</button>
+        <button class="quick-filter" data-category="food">אוכל</button>
+      </div>
+
+      <button id="clearFiltersBtn" class="clear-btn">ניקוי סינון</button>
+    </section>
+
+    <section class="gallery-status">
+      <p id="resultsCount"></p>
+    </section>
+
+    <section id="galleryGrid" class="gallery-grid"></section>
+
+    <div class="load-more-wrapper">
+      <button id="loadMoreBtn" class="load-more-btn">טען עוד תמונות</button>
+    </div>
+
+    <div id="emptyState" class="empty-state hidden">
+      <h2>לא נמצאו תמונות מתאימות</h2>
+      <p>נסי לשנות את החיפוש או לנקות את הסינון.</p>
+    </div>
+
+    <div id="lightbox" class="lightbox hidden">
+      <button id="closeLightbox" class="close-lightbox">×</button>
+      <img id="lightboxImage" src="" alt="" />
+      <p id="lightboxCaption"></p>
+    </div>
+
+  </main>
+
+  <script src="../js/gallery.js"></script>
 
 </body>
 

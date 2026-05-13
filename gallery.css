@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f8f4ef;
+  color: #2c2520;
+}
+
+.gallery-page {
+  min-height: 100vh;
+  padding: 40px 7%;
+}
+
+.gallery-hero {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 35px;
+  padding: 50px 30px;
+  border-radius: 28px;
+  background:
+    linear-gradient(rgba(45, 31, 23, 0.65), rgba(45, 31, 23, 0.65)),
+    url("https://res.cloudinary.com/dhsxupjcn/image/upload/w_1400,q_auto,f_auto/DSC_0284_yiumml.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.hero-label {
+  margin: 0 0 12px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+.gallery-hero h1 {
+  margin: 0 0 18px;
+  font-size: clamp(32px, 5vw, 60px);
+}
+
+.gallery-hero p {
+  margin: 0 auto;
+  max-width: 650px;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+.gallery-controls {
+  background: white;
+  border-radius: 24px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 12px 30px rgba(95, 70, 45, 0.12);
+}
+
+.search-box {
+  margin-bottom: 22px;
+}
+
+.search-box label,
+.filter-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.search-box input,
+.filter-group select {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1px solid #d9cfc4;
+  border-radius: 14px;
+  font-size: 16px;
+  background: #fffaf5;
+  color: #2c2520;
+}
+
+.search-box input:focus,
+.filter-group select:focus {
+  outline: 2px solid #c79b72;
+  border-color: transparent;
+}
+
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.quick-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.quick-filter,
+.clear-btn,
+.load-more-btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 999px;
+  font-size: 15px;
+  transition: 0.25s ease;
+}
+
+.quick-filter {
+  padding: 10px 18px;
+  background: #f1e3d5;
+  color: #4a3526;
+}
+
+.quick-filter:hover,
+.quick-filter.active {
+  background: #9c6b43;
+  color: white;
+}
+
+.clear-btn {
+  padding: 11px 22px;
+  background: #2f2a26;
+  color: white;
+}
+
+.clear-btn:hover {
+  background: #5a4635;
+}
+
+.gallery-status {
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.photo-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 10px 25px rgba(95, 70, 45, 0.14);
+  cursor: pointer;
+  min-height: 270px;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 270px;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.photo-card:hover img {
+  transform: scale(1.06);
+}
+
+.photo-info {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  padding: 35px 16px 16px;
+  color: white;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.photo-card:hover .photo-info {
+  transform: translateY(0);
+}
+
+.photo-info h3 {
+  margin: 0 0 5px;
+  font-size: 18px;
+}
+
+.photo-info p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.load-more-wrapper {
+  text-align: center;
+  margin: 35px 0 10px;
+}
+
+.load-more-btn {
+  padding: 14px 34px;
+  background: #9c6b43;
+  color: white;
+  font-weight: 700;
+}
+
+.load-more-btn:hover {
+  background: #70492d;
+}
+
+
+.empty-state {
+  text-align: center;
+  background: white;
+  padding: 35px;
+  border-radius: 20px;
+  margin-top: 25px;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 78vh;
+  border-radius: 18px;
+  object-fit: contain;
+}
+
+.lightbox p {
+  color: white;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.close-lightbox {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+  border: none;
+  background: white;
+  color: black;
+  font-size: 35px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.load-more-btn.hidden,
+.hidden {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .gallery-page {
+    padding: 25px 18px;
+  }
+
+  .filters-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-hero {
+    padding: 40px 22px;
+  }
+
+  .photo-card img {
+    height: 240px;
+  }
+  
+}
