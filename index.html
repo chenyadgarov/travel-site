@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>מסעות וחוויות | דף הבית</title>
   <link rel="stylesheet" href="hanymoon.css">
-
 </head>
 
 <body>
@@ -14,15 +13,14 @@
     <h1>מסעות וחוויות</h1>
 
     <div id="nav-placeholder"></div>
-
   </header>
 
-  <main>
+  <!-- <main>
     <section class="welcome">
-      <h2>ברוכים הבאים ליומן המסעות שלנו</h2>
+      <h2>יומן מסע דיגיטלי מירח הדבש שלנו</h2>
       <p>
-        אתר אישי שמרכז את חוויות ירח הדבש שלנו, היעדים שביקרנו בהם, ההמלצות שלנו
-        והרגעים שלא רצינו לשכוח.
+        אתר אישי שנבנה ב־HTML, CSS ו־JavaScript, ומציג יעדים, חוויות,
+        המלצות ותמונות מתוך המסע שלנו בארגנטינה, ברזיל, מקסיקו ופלורידה.
       </p>
     </section>
 
@@ -102,7 +100,6 @@
           </p>
         </article>
 
-
         <article class="card">
           <h4> הפיכת האתר לשימושי</h4>
           <p>
@@ -110,18 +107,215 @@
             האתר
           </p>
         </article>
-
       </div>
     </section>
-    <script src="js/nav.js"></script>
-    <script src="script.js"></script>
+  </main> -->
+
+  <main>
+    <section class="hero-section">
+      <div class="hero-text">
+        <span class="small-title">Travel Journal Project</span>
+
+        <h2>מסעות וחוויות מסביב לעולם</h2>
+
+        <p>
+          אתר אישי לתיעוד טיולים, יעדים, תמונות והמלצות ממקומות שונים בעולם.
+          כל מסע מקבל מקום משלו, והאתר נבנה כך שיוכל לגדול עם הזמן.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="html-files/trips.html">לצפייה בטיולים</a>
+          <a href="html-files/pic.html" class="secondary-btn">לגלריית התמונות</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>באתר תמצאו</h3>
+        <ul>
+          <li>טיולים לפי מסעות</li>
+          <li>יעדים לפי מדינות וערים</li>
+          <li>תמונות ורגעים מיוחדים</li>
+          <li>המלצות מהדרך</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="trip-strip">
+      <article>
+        <span>01</span>
+        <h4>מסעות</h4>
+        <p>כל טיול מקבל אזור משלו באתר</p>
+      </article>
+
+      <article>
+        <span>02</span>
+        <h4>יעדים</h4>
+        <p>חלוקה למדינות, ערים ומקומות מיוחדים</p>
+      </article>
+
+      <article>
+        <span>03</span>
+        <h4>חוויות</h4>
+        <p>סיפורים, אוכל, טבע, אטרקציות וזיכרונות</p>
+      </article>
+
+      <article>
+        <span>04</span>
+        <h4>תמונות</h4>
+        <p>גלריה שתתרחב עם כל טיול חדש</p>
+      </article>
+    </section>
+
+    <section class="story-preview">
+      <div class="story-image"></div>
+
+      <div class="story-content">
+        <span class="small-title dark">About The Website</span>
+
+        <h3>אתר שנבנה כדי לשמור חוויות</h3>
+
+        <p>
+          האתר התחיל מהרצון לתעד את ירח הדבש שלנו, אבל נבנה מראש כאתר מסעות כללי.
+          הרעיון הוא ליצור מקום אחד שמרכז זיכרונות, תמונות והמלצות מטיולים שונים.
+        </p>
+
+        <p>
+          מבחינה לימודית, הפרויקט עזר לי לתרגל בניית אתר מרובה עמודים,
+          עיצוב רספונסיבי, עבודה עם תמונות, ניווט משותף ו־JavaScript בסיסי.
+        </p>
+      </div>
+    </section>
+
+    <section class="route-section">
+      <div class="section-header">
+        <span class="small-title">First Journey</span>
+
+        <h3>המסע הראשון באתר</h3>
+
+        <p>
+          ירח הדבש שלנו הוא הטיול הראשון שתועד באתר, והוא כולל כמה יעדים מרכזיים
+          בדרום אמריקה, מקסיקו ופלורידה.
+        </p>
+      </div>
+
+      <div class="route-line">
+        <article class="route-stop">
+          <div class="circle">1</div>
+          <h4>Argentina</h4>
+          <p>Buenos Aires, Bariloche, Ushuaia, Iguazu</p>
+        </article>
+
+        <article class="route-stop">
+          <div class="circle">2</div>
+          <h4>Brazil</h4>
+          <p>Rio de Janeiro</p>
+        </article>
+
+        <article class="route-stop">
+          <div class="circle">3</div>
+          <h4>Mexico</h4>
+          <p>Cancún, Tulum, Isla Mujeres</p>
+        </article>
+
+        <article class="route-stop">
+          <div class="circle">4</div>
+          <h4>Florida</h4>
+          <p>Miami</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="features-section">
+      <div class="section-header">
+        <span class="small-title dark">Website Structure</span>
+
+        <h3>איך האתר מאורגן?</h3>
+      </div>
+
+      <div class="feature-layout">
+        <article class="big-feature">
+          <h4>עמודי טיולים</h4>
+          <p>
+            כל טיול יכול לקבל עמוד משלו עם סיפור, יעדים, תמונות והמלצות.
+            כך האתר לא מוגבל רק לטיול אחד.
+          </p>
+        </article>
+
+        <article>
+          <h4>יעדים</h4>
+          <p>
+            עמודים לפי מדינות וערים, כדי לארגן את התוכן בצורה ברורה.
+          </p>
+        </article>
+
+        <article>
+          <h4>חוויות</h4>
+          <p>
+            מקום לרגעים מיוחדים, מקומות שאהבנו וטיפים אישיים מהדרך.
+          </p>
+        </article>
+
+        <article>
+          <h4>גלריה</h4>
+          <p>
+            אזור תמונות שיכול להתפתח בהמשך לגלריה עם סינון לפי טיול או יעד.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="tech-section">
+      <div class="tech-title">
+        <span class="small-title">Technical Side</span>
+
+        <h3>מה הפרויקט מציג מבחינה טכנית?</h3>
+      </div>
+
+      <div class="tech-grid">
+        <article>
+          <span>HTML</span>
+          <h4>מבנה עמודים</h4>
+          <p>
+            שימוש ב־header, main, section, article ו־footer ליצירת מבנה ברור.
+          </p>
+        </article>
+
+        <article>
+          <span>CSS</span>
+          <h4>עיצוב רספונסיבי</h4>
+          <p>
+            שימוש ב־Flex, ריווחים, Border, Shadow, Hover ו־Media Queries.
+          </p>
+        </article>
+
+        <article>
+          <span>JavaScript</span>
+          <h4>ניווט ואינטראקציות</h4>
+          <p>
+            טעינת תפריט משותף ועבודה עם DOM להצגת תוכן לפי בחירת המשתמש.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="final-section">
+      <h3>פרויקט אישי עם מקום להמשך</h3>
+
+      <p>
+        האתר נבנה כבסיס שאפשר להרחיב לעוד טיולים, עוד תמונות ועוד חוויות.
+      </p>
+
+      <a href="html-files/trips.html">לצפייה בטיולים</a>
+    </section>
   </main>
+
   <footer id="contact">
     <p>כל הזכויות שמורות לחן ידגרוב. לשימוש בתוכן יש לפנות במייל.</p>
     <a href="mailto:chenyadgarov1601@gmail.com">שלח הודעה</a>
   </footer>
 
-
+  <script src="js/nav.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
