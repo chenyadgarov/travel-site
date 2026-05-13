@@ -33,7 +33,7 @@
     const toPages = isHomePage ? "html-files/" : "";
     const navTemplate=`
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <nav aria-label="main-nav">
+  <nav>
       <ul class="main-nav">
         <li><a href="${toRoot}index.html">בית</a></li>
         <li><a href="${toPages}trips.html">טיולים</a>
