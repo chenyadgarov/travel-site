@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const navElement = document.querySelector("#nav-placeholder");
   if (!navElement) return;
-
+console.log("nav.js loaded");
+console.log(window.location.pathname);
   // בודק אם אנחנו בדף הבית
   const isHomePage =
     window.location.pathname.endsWith("index.html") ||
