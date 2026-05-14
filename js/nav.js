@@ -11,11 +11,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const toPages = isHomePage ? "html-files/" : "";
 
   const navTemplate = `
-    <nav aria-label="ניווט ראשי">
+    <nav>
       <ul class="main-nav">
         <li><a href="${toRoot}index.html">בית</a></li>
 
-        <li><a href="${toPages}trips.html">טיולים</a></li>
+        <li id="trips-nav"><a href="${toPages}trips.html">טיולים</a>
+         <ul id="trips-ul">
+            <li><a href="${toPages}argentina.html">ארגנטינה</a></li>
+            <li><a href="${toPages}brazil.html">ברזיל</a></li>
+            <li><a href="${toPages}mexico.html">מקסיקו</a></li>
+            <li><a href="${toPages}florida.html">פלורידה</a></li>
+          </ul></li>
 
         <li id="destinations-nav">
           <a href="${toPages}destinations.html">יעדים</a>

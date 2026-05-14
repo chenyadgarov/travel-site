@@ -5,11 +5,38 @@ const aboutCities = document.querySelectorAll(".aboutCity");
 const stateBtns = document.querySelectorAll(".stateBtn");
 const cityInStates = document.querySelectorAll(".cityInState");
 
+const tripBtns = document.querySelectorAll(".tripBtn");
+const hanymoonIntro = document.querySelectorAll(".hanymoon-intro");
+
+
+
 cityBtns.forEach(btn => {
   btn.addEventListener("click", function () {
     console.log("clicked:", btn.id);
 
     aboutCities.forEach(cityInfo => {
+      cityInfo.style.display = "none";
+    });
+
+    const selectedCity = document.querySelector("." + btn.id);
+
+    if (selectedCity) {
+      selectedCity.style.display = "block";
+    }
+
+    cityBtns.forEach(b => {
+      b.classList.remove("active");
+    });
+
+    btn.classList.add("active");
+  });
+});
+
+tripBtns.forEach(btn => {
+  btn.addEventListener("click", function () {
+    console.log("clicked:", btn.id);
+
+    hanymoonIntro.forEach(cityInfo => {
       cityInfo.style.display = "none";
     });
 
@@ -38,7 +65,29 @@ stateBtns.forEach((state) => {
 
   });
 });
+const tripCards = document.querySelectorAll(".choose-story .card");
+const trips = document.querySelectorAll(".trip");
 
+tripCards.forEach((card) => {
+  card.addEventListener("click", function () {
+    const selectedTripId = card.dataset.story;
+
+    trips.forEach((trip) => {
+      trip.classList.remove("active");
+    });
+
+    tripCards.forEach((cardItem) => {
+      cardItem.classList.remove("active");
+    });
+
+    const selectedTrip = document.getElementById(selectedTripId);
+
+    if (selectedTrip) {
+      selectedTrip.classList.add("active");
+      card.classList.add("active");
+    }
+  });
+});
 
 //  const countryTabs = document.querySelectorAll(".country-tab");
 //     const countryStories = document.querySelectorAll(".country-story");
